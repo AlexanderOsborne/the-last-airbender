@@ -15,5 +15,9 @@ module LastAirbender
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.before_initialize do |app|
+      app.config.paths.add 'app/values', :eager_load => true
+    end
   end
 end

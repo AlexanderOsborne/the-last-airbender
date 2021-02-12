@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def index
-    @characters = CharacterFacade.characters(params["affliation"])
+    # require 'pry'; binding.pry
+    @characters = SearchFacade.characters(params["nation"])
   end
 end
